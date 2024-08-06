@@ -1,0 +1,18 @@
+#cabecalho {
+    display: flex;
+    align-items: center;
+}
+
+#cabecalho img {
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+
+#cabecalho h2 {
+    color: red;
+    margin: 0; /* Remove a margem padrão do h2 */
+}
+#cop {
+    color:red;
+    text-align: center;
+
+}
