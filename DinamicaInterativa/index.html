@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
+<head>
     <meta charset='utf-8'>
-    <title>Tela de Aluno</title>
-    <head>
-        <link href="style/style.css" rel="stylesheet" type="text/css">
-    </head>
-        <div id="cabecalho">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALcAAACUCAMAAADmiEg1AAAAmVBMVEX////tHCQjHyDsAAAAAADtFh/uOT75xMXsABD0jpDsAxP1mpztDBftExz++Pj7zs/96+vwTlP72tr84uLyVFrzeXz39/e7u7sZFBX1oaPvMzve3t4eGhv4vb7q6elfXFxFQkOJh4dsaWmenZ3xYmYOBgjycXQwLC72ra7R0NCsq6vFxMQ3NDWSkZHuLDN8envzg4VQTk7wRErldLDuAAAI7klEQVR4nO2ba3eiMBCGo4DVitbeAhoMl0iVAFL9/z9uZwLei3b3IIvn8H4QCEN8iJOZCaWEtGrVqlWrVq1atfp/egO9j8kYt28k344vzSZv1zWpm3sG2s7JagvbV0JeerPZenCJ/bmeXdP2c/70Uit3xzAMbUgGfcMY9Qh50mA7uxjwl9eRcVVmX9uuVrVydzp94H7udAzFjdsfuMHshoy+ViN4ddxwYWfaSG5TK1N/VIAPfpjT/5vbHExK9L561foK3KhrxP+C+3lY3s2YDDT8SYznmny8Im7UTIGP5vdCPdHfcb+Vejgon7qGVksg/1vu21FFe3pMbvOrjqRfPXdHe2sod788jivu92Zy96fzMq3WyF1HRPkH7ivjOV5A4jS/a0ia/8b98rH4WTM1MRvLveiPflan2dwfoyvxpD8lr4/IDee1JnMbI/NMo1387t89hP87t9H7upC6nfX7m7FoLrf5eWE27+fu/TnqNJn7vA6ZqGwK9eDWXD8Q9/Tb7OTN29HjcE+GJmL3oXW6Ntbkzuueqrini45aOi+gCFiYxnrcuW+VUgn309fH2lSpsgeLhqGas9p3w7nH/dnayCP3cw9Gew7rTG0yaT73YLeyHGF6n+KRBrHl4665pwI/GQ8NA3KnsUDQOVqMPsiw37urg1fh3+PhbP2xUH7xrmIhhvDR+q4RpZJ5OZ5P80ueFpoKKmSsdR6Au9DbSsPRNjoTcBNj9hjc49X0Q+V5w5zicI8aPy8Lk7WmguFzfzgmn+ZPZVcjuSfDfLHz/TImQ3CX56bH771MqGLzqL0d4Q08CjckoL56bv+ND8u3913yVBlPCn2rvu68Uquce6o95yH8obgnXyoWmh93xq6ce7g2sIe7P0qu2k/G31AP1vDovnL/fvtcjy7/UN58bjKZ1/EntTvEwVrUcterlrtetdz1ams+JvcT1BMX3BdWzeMmK+2cu7NenWvQaxw3GfbPuTv9c5n4JK1h3BPtgvtnNYybzLXBQ3KTyfgxuUGrmXHgNkre0hg0jxufMO3j4LbUqnnck9fRIX6XvSc4fmkcNxkc+XevTOpVu2Zxk5655y5/77jTPO6VNrseT3ZqGDdZLR6Tm7wBd4F2VU3jBr3ji10woi/XNG4eN5aHnc7o1lPJ5nHPlZ+Y2+vvcTePe4JPr/Fvv1elXiFoFDdZrX/zrwzN4wZw81fkTeMmq69e/9p7dk3lJuP54Gt9sVY7l1bHa7B/q8lqelP1/mNXq1atWrVqVZuYZVkxLQ54DEd8t0OPbayYEBrhjjK09or4aWdWtD+MDlYxqxabZrqud3edWks4Erhjw46/M0rhQPcAK8AduB2OV+UKvUzsLmduYVj07e6t9GUgD/dTgXhgd7v6gdvphj5yhV1o3oH7cOQgt4vGwM307l6Orbv5T0Olatat3W14zpFVuJH0/Nsr58ZWaOe/4AbZCT/idJIfuNGqK2vitjfXuEPlAMowdHEoo+Ju7GNu+2Blb6pzlavc3ZCXc4cpp5xbbu4byI2tDqJGB27bBSMaZSEOvS1q4kbYUm6Ru6ulF9wczjpu4nSdzRF3UOyrYaiLu/jaq9yRveOGRj3O7N3dnnAT6Lkubhtp2U1uJMJGcG8wjxPHWVr/k9t2lxgq4hvcceEnHCgRDGxs94Kb1setsw1+V8DLuRlj6BgwGynBkK/LgpsecVOwilKcLcvqAuE1bh6jt4RpKTdzXde2iwmHwQR/HIFbecQdgdUyVJOFl4NUyM2UUzoblpZxh4q662CC0hEMOuIJ0tIDt6XbNkZBp0I3ucGtMkkofbvET/CHgL0uZHCpQjp2ArS5RxTcUMzkaTSqbrhvcBOBv/4G896P3FTlTJ9BU4JzwQdX5movPXDDZer2rCsYVXNTzHOO0y2LJxylJqFymMTzvE1358r7eEIDdLSgFOIfREWInlDGfaigSuNgrjQvoRzHKXbkcRxkGxVXq6zBlQvvCr9LbirDX3Gr0s8pVESYo/gt1DzIqua2N7SEu8grv+NGNwFHQQe3M36Sd1QC1tMKubuOWiJwnFJi2b3gjhLnNjfeMATMw1A4XnzCrb4Gb6YqUV+NZ15Mh3meOZ2tln2bG0/YezfQ81XPSX0iVKNf3ZIHFoUnyxI9OuNmGA2uc1M84ezXo3kkpCfcREVxXVQI7icw0pDTbFCoY03E1Yp2N/2jDR5hIN4U62KG2yME2YXjZL+asfC0EzHoV3f3RmotHVa4OqaxZaWuuwkCN5OWiiLqCcKeSx2x3FA9h6BFw4lBfDhWjx64Mj+05s8uKsyZip0pVdxrq1b/WfT4k+a7lB59qDa6O0X2DeTQfmax3+St9KzPSsQzi/gxWcZEZpHrQ0JbxlT3EikcL4w47AkphZ14EP4iWIYxL/FciIMeLm0IbFwI9lBDLSG/cyKXESQYSiFzSj2GVOt5WQRL64BZSy+AksFLKoqD3LdIGpONTi0/ClgWkSWxAs6JsIh0JZajwJ3B8jGAKC0gCVHicBZwrLmJTqjHhAvLnCWMQMpTyO5y4xGo/KRtkUBClRtBVZKxVEBPcZZfVh23J4IYuGkay4xYHnyLyCwY0iyzWM5NlzywYF0AdxIIlogUw3cYS591rTQiiQw8HqdSEplmccC4LzOWBWkqo8AXcB++G9F4k6YV1bIcnAS4E6JL4OZSJIxYWGiINIZd8AvfUtws4Z7cSOSGz6IUsYWA8cxcSZI49Wgc+AmXPtUDFoMxy9CX4tQKMfVGiRVXVw9SIXJu6SE3rAU55HX4OcFP0ixiNPBhvAMYZ2l5MthYQRSFnLk7P4EbdGXq0iUsatI0k64QPgk2LHYl2PrgJ7HP/ZBBdk1EVJ2fQHWSBhFBB7ZYCm4NFRsPhIggQfMgyuBkHEe+SC3qRyRyY4CDM0Koh/Uu/mAR1JQcqpfIBR+WAbgKyzhcHqVRJgT4GZ63MgGlcirSyjIyh0El0BunVH1iE2MqYkHpD5kfdqEBjwjl+S6WBcoQm9QWP7FKyJebYKYuB2Oe90oZruY5q2y8W7Vq1apVq1atWt3WHywEa29ZoinIAAAAAElFTkSuQmCC" alt="Logo UNIPAR">
-            <h2>Bem Vindo a página!</h2>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Chat Unipar</title>
+    <link rel='stylesheet' type='text/css' href='Style/style.css'>
+    <script src='script.js'></script>
+</head>
+<body>
+    <div id="welcome-form">
+        <h2>Seja bem vindo ao Chat Unipar</h2>
+        <input type="text" id="username" placeholder="Escolha seu nome de usuário">
+        <button onclick="enterChatRoom()">Acessar a sala de bate papo</button>
+    </div>
+    <div id="chat-room">
+        <h2>Sala de Bate-papo</h2>
+        <div id="messages">
         </div>
-    <body>
-        <div id="content"></div>
-        <script src="script.js"></script>
-        <p id="cop">Copright@2024</p>
-    </body>
+        <input type="text" id="messageInput" placeholder="Digite sua mensagem">
+        <div id="botoes">
+            <button id="sendMessage" onclick="sendMessage()">Enviar</button>    
+            <button id="leaveChat" onclick="leaveChat()">Sair</button>    
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
 </html>
